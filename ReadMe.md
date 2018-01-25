@@ -1,5 +1,5 @@
 # MBBWallpaper
 
-一个mac下换背景的应用
+一个mac下换桌面背景的应用
 
-支持Gif
+支持GIF
