@@ -13,23 +13,34 @@ class DragView: NSView {
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         
-//        self.registerForDraggedTypes(<#T##newTypes: [NSPasteboard.PasteboardType]##[NSPasteboard.PasteboardType]#>)
+        
     }
     
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
+        self.registerForDraggedTypes([NSPasteboard.PasteboardType("NSFilenamesPboardType")])
     }
     
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
         
         guard let types = sender.draggingPasteboard().types else {
-            return NSDragOperation.
+            return NSDragOperation.init(rawValue: 0)
         }
         
-        if types.contains(NSPasteboard.PasteboardType.fileNameType(forPathExtension: "gif")) {
+        if types.contains(NSPasteboard.PasteboardType("NSFilenamesPboardType")) {
             return .copy
         }
-        return .none
+        return NSDragOperation.init(rawValue: 0)
+    }
+    
+    override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
+        
+        let pasteboard = sender.draggingPasteboard()
+        let list = pasteboard.propertyList(forType: NSPasteboard.PasteboardType("NSFilenamesPboardType"))
+        
+        print(list)
+        
+        return true
     }
     
     override func draw(_ dirtyRect: NSRect) {
