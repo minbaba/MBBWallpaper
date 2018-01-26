@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MBBWallpaper
 //
-//  Created by 郑敏 on 2018/1/19.
+//  Created by minbaba on 2018/1/19.
 //  Copyright © 2018年 minbaba Inc. All rights reserved.
 //
 

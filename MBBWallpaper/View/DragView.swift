@@ -2,7 +2,7 @@
 //  DragView.swift
 //  MBBWallpaper
 //
-//  Created by 郑敏 on 2018/1/22.
+//  Created by minbaba on 2018/1/22.
 //  Copyright © 2018年 minbaba Inc. All rights reserved.
 //
 
@@ -36,9 +36,18 @@ class DragView: NSView {
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
         
         let pasteboard = sender.draggingPasteboard()
-        let list = pasteboard.propertyList(forType: NSPasteboard.PasteboardType("NSFilenamesPboardType"))
+        guard let list = pasteboard.propertyList(forType: NSPasteboard.PasteboardType("NSFilenamesPboardType")) as? [String] else {
+            return false
+        }
+        let sufixs = ["JPG", "JPEG", "PNG", "GIF"]
+        let resultList = list.filter { (element) -> Bool in
+            guard let sufix = element.split(separator: ".").last else {
+                return false
+            }
+            return sufixs.contains(String(sufix).uppercased())
+        }
         
-        print(list)
+        print(resultList)
         
         return true
     }

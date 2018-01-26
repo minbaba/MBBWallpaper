@@ -13,6 +13,8 @@
 		7D4F07FE2011E9A4000F6B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4F07FC2011E9A4000F6B0D /* Main.storyboard */; };
 		7D4F080A2011E9A4000F6B0D /* MBBWallpaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F08092011E9A4000F6B0D /* MBBWallpaperTests.swift */; };
 		7D4F08152011E9A4000F6B0D /* MBBWallpaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F08142011E9A4000F6B0D /* MBBWallpaperUITests.swift */; };
+		7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71C4A7201B153200F53E9A /* ImageItem.swift */; };
+		7D71C4AA201B153200F53E9A /* ImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D71C4A8201B153200F53E9A /* ImageItem.xib */; };
 		7DC124712015C55900C44279 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC124702015C55900C44279 /* DragView.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		7D4F08102011E9A4000F6B0D /* MBBWallpaperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBBWallpaperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4F08142011E9A4000F6B0D /* MBBWallpaperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBWallpaperUITests.swift; sourceTree = "<group>"; };
 		7D4F08162011E9A4000F6B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D71C4A7201B153200F53E9A /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		7D71C4A8201B153200F53E9A /* ImageItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageItem.xib; sourceTree = "<group>"; };
 		7DC124702015C55900C44279 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,7 @@
 		7D4F07F52011E9A4000F6B0D /* MBBWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				7D71C4A6201B151100F53E9A /* Cell */,
 				7DC1246F2015C53400C44279 /* View */,
 				7D4F07F62011E9A4000F6B0D /* AppDelegate.swift */,
 				7D4F07F82011E9A4000F6B0D /* ViewController.swift */,
@@ -125,6 +130,15 @@
 				7D4F08162011E9A4000F6B0D /* Info.plist */,
 			);
 			path = MBBWallpaperUITests;
+			sourceTree = "<group>";
+		};
+		7D71C4A6201B151100F53E9A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7D71C4A7201B153200F53E9A /* ImageItem.swift */,
+				7D71C4A8201B153200F53E9A /* ImageItem.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		7DC1246F2015C53400C44279 /* View */ = {
@@ -242,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D71C4AA201B153200F53E9A /* ImageItem.xib in Resources */,
 				7D4F07FB2011E9A4000F6B0D /* Assets.xcassets in Resources */,
 				7D4F07FE2011E9A4000F6B0D /* Main.storyboard in Resources */,
 			);
@@ -268,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */,
 				7D4F07F92011E9A4000F6B0D /* ViewController.swift in Sources */,
 				7D4F07F72011E9A4000F6B0D /* AppDelegate.swift in Sources */,
 				7DC124712015C55900C44279 /* DragView.swift in Sources */,
