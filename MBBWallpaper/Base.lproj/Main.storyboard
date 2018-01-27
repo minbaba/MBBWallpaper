@@ -723,6 +723,9 @@
                             <constraint firstAttribute="trailing" secondItem="xGP-xX-43H" secondAttribute="trailing" id="ypi-Gm-iR6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dragView" destination="xGP-xX-43H" id="MY6-y5-mgk"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

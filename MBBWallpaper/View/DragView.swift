@@ -8,12 +8,16 @@
 
 import Cocoa
 
+protocol DragViewDelegate: NSObjectProtocol {
+    func dragViewReceivedImages(dragView: DragView, images: [String])
+}
+
 class DragView: NSView {
+    
+    weak var delegate: DragViewDelegate?
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        
-        
     }
     
     required init?(coder decoder: NSCoder) {
@@ -45,6 +49,10 @@ class DragView: NSView {
                 return false
             }
             return sufixs.contains(String(sufix).uppercased())
+        }
+        
+        if let _ = self.delegate {
+            self.delegate?.dragViewReceivedImages(dragView: self, images: resultList)
         }
         
         print(resultList)

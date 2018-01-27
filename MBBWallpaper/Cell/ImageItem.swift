@@ -10,9 +10,14 @@ import Cocoa
 
 class ImageItem: NSCollectionViewItem {
 
+    @IBOutlet weak var previewImage: NSImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
+        if let representObj = self.representedObject as? String {
+            self.imageView?.image = NSImage(named: NSImage.Name(rawValue: representObj))
+        }
     }
     
 }
