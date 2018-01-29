@@ -46,7 +46,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier("cell"), for: indexPath) as! ImageItem
-        item.imageView?.image = NSImage(named: NSImage.Name(rawValue: self.imagesList![indexPath.item]))
+        item.imageView?.image = NSImage(contentsOfFile: self.imagesList![indexPath.item])
         return item
     }
     
