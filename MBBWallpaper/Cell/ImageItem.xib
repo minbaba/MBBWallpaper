@@ -8,7 +8,6 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ImageItem" customModule="MBBWallpaper" customModuleProvider="target">
             <connections>
-                <outlet property="previewImage" destination="fhD-7I-CbA" id="zXx-la-AII"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -30,5 +29,11 @@
                 <constraint firstItem="fhD-7I-CbA" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="vIS-9X-aVd"/>
             </constraints>
         </customView>
+        <collectionViewItem id="FiL-3Z-SGZ" customClass="ImageItem" customModule="MBBWallpaper" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="fhD-7I-CbA" id="5f8-YN-qJT"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="tS9-4y-SMl"/>
+            </connections>
+        </collectionViewItem>
     </objects>
 </document>

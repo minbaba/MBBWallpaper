@@ -10,7 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, DragViewDelegate {
     
-    var collection: NSCollectionView!
+
+    @IBOutlet weak var collection: NSCollectionView!
     @IBOutlet weak var dragView: DragView!
     var imagesList: [String]?
     
@@ -18,10 +19,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         super.viewDidLoad()
         
         print(self.view.bounds)
-        self.collection = NSCollectionView(frame: self.view.bounds)
-        self.collection.delegate = self
-        self.collection.dataSource = self
-        self.collection.register(ImageItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier("cell"))
+        self.collection.register(NSNib(nibNamed: NSNib.Name(rawValue: "ImageItem"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier("cell"))
         self.view.addSubview(self.collection)
         
         let layout = NSCollectionViewFlowLayout()
@@ -40,15 +38,15 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     }
 
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if let list = self.imagesList {
-//            return list.count
-//        }
-        return 1
+        if let list = self.imagesList {
+            return list.count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier("cell"), for: indexPath) as! ImageItem
-        item.previewImage.image = NSImage(named: NSImage.Name(rawValue: self.imagesList![indexPath.item]))
+        item.imageView?.image = NSImage(named: NSImage.Name(rawValue: self.imagesList![indexPath.item]))
         return item
     }
     

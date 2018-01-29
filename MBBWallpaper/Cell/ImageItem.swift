@@ -10,7 +10,6 @@ import Cocoa
 
 class ImageItem: NSCollectionViewItem {
 
-    @IBOutlet weak var previewImage: NSImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
