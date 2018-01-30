@@ -18,17 +18,20 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(self.view.bounds)
         self.collection.register(NSNib(nibNamed: NSNib.Name(rawValue: "ImageItem"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier("cell"))
-        self.view.addSubview(self.collection)
         
         let layout = NSCollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 80, height: 60)
+        layout.sectionInset = NSEdgeInsetsMake(10, 10, 10, 10)
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         self.collection.collectionViewLayout = layout
         
         dragView.delegate = self
+    }
+    
+    override func viewDidLayout() {
+        
     }
 
     override var representedObject: Any? {
@@ -46,7 +49,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier("cell"), for: indexPath) as! ImageItem
-        item.imageView?.image = NSImage(contentsOfFile: self.imagesList![indexPath.item])
+        item.updateImage(image: NSImage(contentsOfFile: self.imagesList![indexPath.item]))
         return item
     }
     

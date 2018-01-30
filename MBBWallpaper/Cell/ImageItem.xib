@@ -14,24 +14,12 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fhD-7I-CbA">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="8yc-Hi-2SA"/>
-                </imageView>
-            </subviews>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="fhD-7I-CbA" secondAttribute="trailing" id="G0a-GQ-GyI"/>
-                <constraint firstItem="fhD-7I-CbA" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="K8G-CI-zFT"/>
-                <constraint firstAttribute="bottom" secondItem="fhD-7I-CbA" secondAttribute="bottom" id="REZ-o6-Kbg"/>
-                <constraint firstItem="fhD-7I-CbA" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="vIS-9X-aVd"/>
-            </constraints>
+            <point key="canvasLocation" x="58" y="123"/>
         </customView>
         <collectionViewItem id="FiL-3Z-SGZ" customClass="ImageItem" customModule="MBBWallpaper" customModuleProvider="target">
             <connections>
-                <outlet property="imageView" destination="fhD-7I-CbA" id="5f8-YN-qJT"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="tS9-4y-SMl"/>
             </connections>
         </collectionViewItem>
