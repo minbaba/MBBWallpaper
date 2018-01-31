@@ -53,6 +53,51 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         return item
     }
     
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+//        let task = NSUserAppleScriptTask()
+
+        guard let indexPath = indexPaths.first else {
+            return
+        }
+        guard let imagePath = self.imagesList?[indexPath.item] else {
+            return
+        }
+        
+        let url = NSURL.fileURL(withPath:imagePath)
+        let sws = NSWorkspace.shared
+        for screen in NSScreen.screens {
+            guard let opt = sws.desktopImageOptions(for: screen) else {
+                continue
+            }
+
+            do {
+                try sws.setDesktopImageURL(url, for: screen, options: opt)
+            } catch {
+                print(error)
+            }
+            
+        }
+        
+        
+        let task = Process()
+        task.launchPath = "/bin/sh"
+        task.arguments = ["/usr/bin/osascript",
+                          "-e",
+                          "tell application \"Finder\" to set desktop picture to POSIX file \"/Library/Desktop Pictures/27.jpg\""]
+        task.launch()
+        
+        
+//        let script = NSAppleScript(source: "tell application \"Finder\" to set desktop picture to POSIX file \"/Library/Desktop Pictures/27.jpg\"")
+//        script.
+//        var errorInfo: AutoreleasingUnsafeMutablePointer<NSDictionary?>? = nil
+//        let resultDesc = script?.executeAndReturnError(errorInfo)
+//        if let _ = resultDesc {
+//            print(resultDesc)
+//        } else {
+//            print(errorInfo)
+//        }
+    }
+    
     
     func dragViewReceivedImages(dragView: DragView, images: [String]) {
         self.imagesList = images
