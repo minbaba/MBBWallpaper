@@ -78,24 +78,6 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             
         }
         
-        
-        let task = Process()
-        task.launchPath = "/bin/sh"
-        task.arguments = ["/usr/bin/osascript",
-                          "-e",
-                          "tell application \"Finder\" to set desktop picture to POSIX file \"/Library/Desktop Pictures/27.jpg\""]
-        task.launch()
-        
-        
-//        let script = NSAppleScript(source: "tell application \"Finder\" to set desktop picture to POSIX file \"/Library/Desktop Pictures/27.jpg\"")
-//        script.
-//        var errorInfo: AutoreleasingUnsafeMutablePointer<NSDictionary?>? = nil
-//        let resultDesc = script?.executeAndReturnError(errorInfo)
-//        if let _ = resultDesc {
-//            print(resultDesc)
-//        } else {
-//            print(errorInfo)
-//        }
     }
     
     
