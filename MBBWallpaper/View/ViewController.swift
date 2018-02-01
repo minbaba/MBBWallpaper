@@ -34,6 +34,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         self.statusItem.button?.image = NSImage(named: NSImage.Name(rawValue: "StatusIcon"))
+        self.statusItem.button?.imageScaling = .scaleAxesIndependently
     }
     
     override func viewDidLayout() {
