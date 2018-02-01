@@ -7,12 +7,15 @@
 //
 
 import Cocoa
+import AppKit
 
 class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, DragViewDelegate {
     
 
     @IBOutlet weak var collection: NSCollectionView!
     @IBOutlet weak var dragView: DragView!
+    
+    var statusItem: NSStatusItem!
     var imagesList: [String]?
     
     override func viewDidLoad() {
@@ -28,6 +31,9 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         self.collection.collectionViewLayout = layout
         
         dragView.delegate = self
+        
+        self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+        self.statusItem.button?.image = NSImage(named: NSImage.Name(rawValue: "StatusIcon"))
     }
     
     override func viewDidLayout() {
@@ -75,9 +81,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             } catch {
                 print(error)
             }
-            
         }
-        
     }
     
     
