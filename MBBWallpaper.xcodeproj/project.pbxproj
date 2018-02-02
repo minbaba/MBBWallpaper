@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D4E641320231B1E000E2AC0 /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4E641120231B1E000E2AC0 /* PopViewController.swift */; };
+		7D4E641420231B1E000E2AC0 /* PopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D4E641220231B1E000E2AC0 /* PopViewController.xib */; };
 		7D4F07F72011E9A4000F6B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F07F62011E9A4000F6B0D /* AppDelegate.swift */; };
 		7D4F07F92011E9A4000F6B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F07F82011E9A4000F6B0D /* ViewController.swift */; };
 		7D4F07FB2011E9A4000F6B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4F07FA2011E9A4000F6B0D /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D4E641120231B1E000E2AC0 /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
+		7D4E641220231B1E000E2AC0 /* PopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopViewController.xib; sourceTree = "<group>"; };
 		7D4F07F32011E9A4000F6B0D /* MBBWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBBWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4F07F62011E9A4000F6B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D4F07F82011E9A4000F6B0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D4E641020231B03000E2AC0 /* Pop */ = {
+			isa = PBXGroup;
+			children = (
+				7D4E641120231B1E000E2AC0 /* PopViewController.swift */,
+				7D4E641220231B1E000E2AC0 /* PopViewController.xib */,
+			);
+			path = Pop;
+			sourceTree = "<group>";
+		};
 		7D4F07EA2011E9A4000F6B0D = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +115,7 @@
 		7D4F07F52011E9A4000F6B0D /* MBBWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				7D4E641020231B03000E2AC0 /* Pop */,
 				7D71C4A6201B151100F53E9A /* Cell */,
 				7DC1246F2015C53400C44279 /* View */,
 				7D4F07F62011E9A4000F6B0D /* AppDelegate.swift */,
@@ -256,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4E641420231B1E000E2AC0 /* PopViewController.xib in Resources */,
 				7D71C4AA201B153200F53E9A /* ImageItem.xib in Resources */,
 				7D4F07FB2011E9A4000F6B0D /* Assets.xcassets in Resources */,
 				7D4F07FE2011E9A4000F6B0D /* Main.storyboard in Resources */,
@@ -285,6 +300,7 @@
 			files = (
 				7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */,
 				7D4F07F92011E9A4000F6B0D /* ViewController.swift in Sources */,
+				7D4E641320231B1E000E2AC0 /* PopViewController.swift in Sources */,
 				7D4F07F72011E9A4000F6B0D /* AppDelegate.swift in Sources */,
 				7DC124712015C55900C44279 /* DragView.swift in Sources */,
 			);

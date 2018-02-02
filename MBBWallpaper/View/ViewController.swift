@@ -61,7 +61,6 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     }
     
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
-//        let task = NSUserAppleScriptTask()
 
         guard let indexPath = indexPaths.first else {
             return
