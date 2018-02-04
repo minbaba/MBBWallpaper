@@ -15,6 +15,8 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     @IBOutlet weak var collection: NSCollectionView!
     @IBOutlet weak var dragView: DragView!
     
+    let popver = NSPopover()
+    
     var statusItem: NSStatusItem!
     var imagesList: [String]?
     
@@ -35,6 +37,13 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         self.statusItem.button?.image = NSImage(named: NSImage.Name(rawValue: "StatusIcon"))
         self.statusItem.button?.imageScaling = .scaleAxesIndependently
+        
+        self.popver.behavior = .transient
+        self.popver.appearance = NSAppearance(named: .vibrantDark)
+        self.popver.contentViewController = PopViewController()
+       
+        self.statusItem.target = self
+        self.statusItem.button?.action = #selector(self.showPopover)
     }
     
     override func viewDidLayout() {
@@ -88,6 +97,10 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     func dragViewReceivedImages(dragView: DragView, images: [String]) {
         self.imagesList = images
         self.collection.reloadData()
+    }
+    
+    @objc func showPopover(sender: NSStatusBarButton) {
+        self.popver.show(relativeTo: sender.bounds, of: sender, preferredEdge: .maxY)
     }
 }
 

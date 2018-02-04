@@ -86,8 +86,6 @@
 		7D4E641020231B03000E2AC0 /* Pop */ = {
 			isa = PBXGroup;
 			children = (
-				7D4E641120231B1E000E2AC0 /* PopViewController.swift */,
-				7D4E641220231B1E000E2AC0 /* PopViewController.xib */,
 			);
 			path = Pop;
 			sourceTree = "<group>";
@@ -150,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				7D4F07F82011E9A4000F6B0D /* ViewController.swift */,
+				7D4E641120231B1E000E2AC0 /* PopViewController.swift */,
+				7D4E641220231B1E000E2AC0 /* PopViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
