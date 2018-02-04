@@ -115,6 +115,7 @@
 		7D4F07F52011E9A4000F6B0D /* MBBWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				7D5F06D2202747A5005018B0 /* ViewController */,
 				7D4E641020231B03000E2AC0 /* Pop */,
 				7D71C4A6201B151100F53E9A /* Cell */,
 				7DC1246F2015C53400C44279 /* View */,
@@ -145,6 +146,14 @@
 			path = MBBWallpaperUITests;
 			sourceTree = "<group>";
 		};
+		7D5F06D2202747A5005018B0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7D4F07F82011E9A4000F6B0D /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		7D71C4A6201B151100F53E9A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				7DC124702015C55900C44279 /* DragView.swift */,
-				7D4F07F82011E9A4000F6B0D /* ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
