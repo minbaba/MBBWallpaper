@@ -15,8 +15,6 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     @IBOutlet weak var collection: NSCollectionView!
     @IBOutlet weak var dragView: DragView!
     
-    let popver = NSPopover()
-    
     var statusItem: NSStatusItem!
     var imagesList: [String]?
     
@@ -34,16 +32,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         
         dragView.delegate = self
         
-        self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-        self.statusItem.button?.image = NSImage(named: NSImage.Name(rawValue: "StatusIcon"))
-        self.statusItem.button?.imageScaling = .scaleAxesIndependently
-        
-        self.popver.behavior = .transient
-        self.popver.appearance = NSAppearance(named: .vibrantDark)
-        self.popver.contentViewController = PopViewController()
-       
-        self.statusItem.target = self
-        self.statusItem.button?.action = #selector(self.showPopover)
+        self.constructStatusItem()
     }
     
     override func viewDidLayout() {
@@ -99,8 +88,25 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         self.collection.reloadData()
     }
     
-    @objc func showPopover(sender: NSStatusBarButton) {
-        self.popver.show(relativeTo: sender.bounds, of: sender, preferredEdge: .maxY)
+    func constructStatusItem() {
+        
+        self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+        self.statusItem.button?.image = NSImage(named: NSImage.Name(rawValue: "StatusIcon"))
+        self.statusItem.button?.imageScaling = .scaleAxesIndependently
+        
+        let menu = NSMenu()
+        menu.addItem(NSMenuItem(title: "x", action: #selector(printQuote(_:)), keyEquivalent: "p"))
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(NSMenuItem(title: "Quit Quotes", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        
+        self.statusItem.menu = menu
+    }
+    
+    @objc func printQuote(_ sender: Any?) {
+        let quoteText = "Never put off until tomorrow what you can do the day after tomorrow."
+        let quoteAuthor = "Mark Twain"
+        
+        print("\(quoteText) — \(quoteAuthor)")
     }
 }
 
