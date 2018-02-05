@@ -95,7 +95,10 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         self.statusItem.button?.imageScaling = .scaleAxesIndependently
         
         let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: "x", action: #selector(printQuote(_:)), keyEquivalent: "p"))
+
+        let pItem = NSMenuItem(title: "x", action: #selector(printQuote(_:)), keyEquivalent: "p")
+        pItem.view = MenuView(frame: NSRect(x: 0, y: 0, width: 100, height: 40))
+        menu.addItem(pItem)
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit Quotes", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         

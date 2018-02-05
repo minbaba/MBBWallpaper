@@ -15,6 +15,8 @@
 		7D4F07FE2011E9A4000F6B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4F07FC2011E9A4000F6B0D /* Main.storyboard */; };
 		7D4F080A2011E9A4000F6B0D /* MBBWallpaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F08092011E9A4000F6B0D /* MBBWallpaperTests.swift */; };
 		7D4F08152011E9A4000F6B0D /* MBBWallpaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F08142011E9A4000F6B0D /* MBBWallpaperUITests.swift */; };
+		7D5F06D4202806C3005018B0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F06D3202806C3005018B0 /* MenuView.swift */; };
+		7D5F06D6202849A5005018B0 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5F06D5202849A5005018B0 /* MenuView.xib */; };
 		7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71C4A7201B153200F53E9A /* ImageItem.swift */; };
 		7D71C4AA201B153200F53E9A /* ImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D71C4A8201B153200F53E9A /* ImageItem.xib */; };
 		7DC124712015C55900C44279 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC124702015C55900C44279 /* DragView.swift */; };
@@ -53,6 +55,8 @@
 		7D4F08102011E9A4000F6B0D /* MBBWallpaperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBBWallpaperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4F08142011E9A4000F6B0D /* MBBWallpaperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBWallpaperUITests.swift; sourceTree = "<group>"; };
 		7D4F08162011E9A4000F6B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5F06D3202806C3005018B0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		7D5F06D5202849A5005018B0 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		7D71C4A7201B153200F53E9A /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		7D71C4A8201B153200F53E9A /* ImageItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageItem.xib; sourceTree = "<group>"; };
 		7DC124702015C55900C44279 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				7DC124702015C55900C44279 /* DragView.swift */,
+				7D5F06D3202806C3005018B0 /* MenuView.swift */,
+				7D5F06D5202849A5005018B0 /* MenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			files = (
 				7D4E641420231B1E000E2AC0 /* PopViewController.xib in Resources */,
 				7D71C4AA201B153200F53E9A /* ImageItem.xib in Resources */,
+				7D5F06D6202849A5005018B0 /* MenuView.xib in Resources */,
 				7D4F07FB2011E9A4000F6B0D /* Assets.xcassets in Resources */,
 				7D4F07FE2011E9A4000F6B0D /* Main.storyboard in Resources */,
 			);
@@ -307,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */,
+				7D5F06D4202806C3005018B0 /* MenuView.swift in Sources */,
 				7D4F07F92011E9A4000F6B0D /* ViewController.swift in Sources */,
 				7D4E641320231B1E000E2AC0 /* PopViewController.swift in Sources */,
 				7D4F07F72011E9A4000F6B0D /* AppDelegate.swift in Sources */,
