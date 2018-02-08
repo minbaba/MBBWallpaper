@@ -6,13 +6,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="MenuView" customModule="MBBWallpaper" customModuleProvider="target">
+            <connections>
+                <outlet property="thumbnailView" destination="zst-M3-SIR" id="8Ji-R5-S07"/>
+                <outlet property="titleLabel" destination="5qO-Gc-Rin" id="Gdg-JK-VtU"/>
+                <outlet property="view" destination="c22-O7-iKe" id="dbJ-HX-L3N"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="316" height="152"/>
+            <rect key="frame" x="0.0" y="0.0" width="258" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <point key="canvasLocation" x="57" y="108"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="5qO-Gc-Rin">
+                    <rect key="frame" x="8" y="22" width="31" height="17"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="next" id="47F-n8-oNH">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zst-M3-SIR">
+                    <rect key="frame" x="178" y="10" width="70" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8Ug-1d-KH1"/>
+                        <constraint firstAttribute="width" constant="70" id="aOB-p0-EJw"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="3BD-Ej-ell"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="zst-M3-SIR" secondAttribute="bottom" constant="10" id="GeI-f4-6RI"/>
+                <constraint firstAttribute="trailing" secondItem="zst-M3-SIR" secondAttribute="trailing" constant="10" id="N7g-0H-8mX"/>
+                <constraint firstItem="zst-M3-SIR" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="10" id="NM8-4z-wyb"/>
+                <constraint firstItem="5qO-Gc-Rin" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="WOB-9Y-jj8"/>
+                <constraint firstItem="5qO-Gc-Rin" firstAttribute="centerY" secondItem="zst-M3-SIR" secondAttribute="centerY" id="k8Z-QQ-jZU"/>
+            </constraints>
+            <point key="canvasLocation" x="25" y="69"/>
         </customView>
     </objects>
 </document>

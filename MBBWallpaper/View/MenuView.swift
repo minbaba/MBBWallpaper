@@ -10,12 +10,14 @@ import Cocoa
 
 class MenuView: NSView {
     
+    @IBOutlet var view: NSView!
+    @IBOutlet weak var titleLabel: NSTextField!
+    @IBOutlet weak var thumbnailView: NSImageView!
+    
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         
-        let label = NSTextField(frame: self.bounds)
-        self.addSubview(label)
-        label.cell?.title = "哈哈哈哈哈哈"
+        
     }
     
     required init?(coder decoder: NSCoder) {
