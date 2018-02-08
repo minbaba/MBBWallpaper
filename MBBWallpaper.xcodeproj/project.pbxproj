@@ -15,6 +15,21 @@
 		7D4F07FE2011E9A4000F6B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4F07FC2011E9A4000F6B0D /* Main.storyboard */; };
 		7D4F080A2011E9A4000F6B0D /* MBBWallpaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F08092011E9A4000F6B0D /* MBBWallpaperTests.swift */; };
 		7D4F08152011E9A4000F6B0D /* MBBWallpaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F08142011E9A4000F6B0D /* MBBWallpaperUITests.swift */; };
+		7D5C225A202CA22800D84A44 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C2259202CA22800D84A44 /* RxTest.framework */; };
+		7D5C2263202CA23600D84A44 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225C202CA23500D84A44 /* RxCocoa.framework */; };
+		7D5C2264202CA23600D84A44 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225C202CA23500D84A44 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5C2265202CA23600D84A44 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225D202CA23500D84A44 /* RxSwift.framework */; };
+		7D5C2266202CA23600D84A44 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225D202CA23500D84A44 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5C2267202CA23600D84A44 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225E202CA23500D84A44 /* Alamofire.framework */; };
+		7D5C2268202CA23600D84A44 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225E202CA23500D84A44 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5C2269202CA23600D84A44 /* HandyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225F202CA23600D84A44 /* HandyJSON.framework */; };
+		7D5C226A202CA23600D84A44 /* HandyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225F202CA23600D84A44 /* HandyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5C226B202CA23600D84A44 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C2260202CA23600D84A44 /* Kingfisher.framework */; };
+		7D5C226C202CA23600D84A44 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C2260202CA23600D84A44 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5C226F202CA27000D84A44 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C226D202CA26F00D84A44 /* RxBlocking.framework */; };
+		7D5C2270202CA27000D84A44 /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C226D202CA26F00D84A44 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7D5C2271202CA27000D84A44 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C226E202CA27000D84A44 /* SnapKit.framework */; };
+		7D5C2272202CA27000D84A44 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C226E202CA27000D84A44 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D5F06D4202806C3005018B0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F06D3202806C3005018B0 /* MenuView.swift */; };
 		7D5F06D820285D07005018B0 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5F06D720285D07005018B0 /* MenuView.xib */; };
 		7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71C4A7201B153200F53E9A /* ImageItem.swift */; };
@@ -39,6 +54,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7D7C0E56202CA1B4008038F9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D5C2266202CA23600D84A44 /* RxSwift.framework in Embed Frameworks */,
+				7D5C226A202CA23600D84A44 /* HandyJSON.framework in Embed Frameworks */,
+				7D5C2264202CA23600D84A44 /* RxCocoa.framework in Embed Frameworks */,
+				7D5C2272202CA27000D84A44 /* SnapKit.framework in Embed Frameworks */,
+				7D5C226C202CA23600D84A44 /* Kingfisher.framework in Embed Frameworks */,
+				7D5C2268202CA23600D84A44 /* Alamofire.framework in Embed Frameworks */,
+				7D5C2270202CA27000D84A44 /* RxBlocking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7D4E641120231B1E000E2AC0 /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
 		7D4E641220231B1E000E2AC0 /* PopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopViewController.xib; sourceTree = "<group>"; };
@@ -55,6 +90,14 @@
 		7D4F08102011E9A4000F6B0D /* MBBWallpaperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBBWallpaperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4F08142011E9A4000F6B0D /* MBBWallpaperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBBWallpaperUITests.swift; sourceTree = "<group>"; };
 		7D4F08162011E9A4000F6B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5C2259202CA22800D84A44 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
+		7D5C225C202CA23500D84A44 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		7D5C225D202CA23500D84A44 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		7D5C225E202CA23500D84A44 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		7D5C225F202CA23600D84A44 /* HandyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandyJSON.framework; path = Carthage/Build/Mac/HandyJSON.framework; sourceTree = "<group>"; };
+		7D5C2260202CA23600D84A44 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/Mac/Kingfisher.framework; sourceTree = "<group>"; };
+		7D5C226D202CA26F00D84A44 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
+		7D5C226E202CA27000D84A44 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/Mac/SnapKit.framework; sourceTree = "<group>"; };
 		7D5F06D3202806C3005018B0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		7D5F06D720285D07005018B0 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		7D71C4A7201B153200F53E9A /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
@@ -67,6 +110,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5C226F202CA27000D84A44 /* RxBlocking.framework in Frameworks */,
+				7D5C225A202CA22800D84A44 /* RxTest.framework in Frameworks */,
+				7D5C2269202CA23600D84A44 /* HandyJSON.framework in Frameworks */,
+				7D5C2265202CA23600D84A44 /* RxSwift.framework in Frameworks */,
+				7D5C226B202CA23600D84A44 /* Kingfisher.framework in Frameworks */,
+				7D5C2267202CA23600D84A44 /* Alamofire.framework in Frameworks */,
+				7D5C2263202CA23600D84A44 /* RxCocoa.framework in Frameworks */,
+				7D5C2271202CA27000D84A44 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,10 +148,19 @@
 		7D4F07EA2011E9A4000F6B0D = {
 			isa = PBXGroup;
 			children = (
+				7D5C226D202CA26F00D84A44 /* RxBlocking.framework */,
+				7D5C226E202CA27000D84A44 /* SnapKit.framework */,
+				7D5C225E202CA23500D84A44 /* Alamofire.framework */,
+				7D5C225F202CA23600D84A44 /* HandyJSON.framework */,
+				7D5C2260202CA23600D84A44 /* Kingfisher.framework */,
+				7D5C225C202CA23500D84A44 /* RxCocoa.framework */,
+				7D5C225D202CA23500D84A44 /* RxSwift.framework */,
+				7D7C0E57202CA1C7008038F9 /* FrameWork */,
 				7D4F07F52011E9A4000F6B0D /* MBBWallpaper */,
 				7D4F08082011E9A4000F6B0D /* MBBWallpaperTests */,
 				7D4F08132011E9A4000F6B0D /* MBBWallpaperUITests */,
 				7D4F07F42011E9A4000F6B0D /* Products */,
+				7D5C2258202CA22800D84A44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +208,14 @@
 			path = MBBWallpaperUITests;
 			sourceTree = "<group>";
 		};
+		7D5C2258202CA22800D84A44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D5C2259202CA22800D84A44 /* RxTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D5F06D2202747A5005018B0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +233,13 @@
 				7D71C4A8201B153200F53E9A /* ImageItem.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		7D7C0E57202CA1C7008038F9 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FrameWork;
 			sourceTree = "<group>";
 		};
 		7DC1246F2015C53400C44279 /* View */ = {
@@ -187,6 +262,7 @@
 				7D4F07EF2011E9A4000F6B0D /* Sources */,
 				7D4F07F02011E9A4000F6B0D /* Frameworks */,
 				7D4F07F12011E9A4000F6B0D /* Resources */,
+				7D7C0E56202CA1B4008038F9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -484,6 +560,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 25AV5Y6AN6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = MBBWallpaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -501,6 +581,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 25AV5Y6AN6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = MBBWallpaper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
