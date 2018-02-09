@@ -2,7 +2,7 @@
 //  MenuView.swift
 //  MBBWallpaper
 //
-//  Created by 郑敏 on 2018/2/5.
+//  Created by minbaba on 2018/2/5.
 //  Copyright © 2018年 minbaba Inc. All rights reserved.
 //
 

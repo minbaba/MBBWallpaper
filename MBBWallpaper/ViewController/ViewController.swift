@@ -33,9 +33,6 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         dragView.delegate = self
         
         self.constructStatusItem()
-        
-        let path =  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last
-        print(path)
     }
     
     override func viewDidLayout() {
@@ -70,6 +67,9 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             return
         }
         
+        ImageDownloader.getImage(for: "https://c1.staticflickr.com/6/5572/14689720998_d154c4019f_h.jpg") { (image) in
+            print(image)
+        }
 //        let url = NSURL.fileURL(withPath:imagePath)
         let url = URL(string: "https://c1.staticflickr.com/6/5572/14689720998_d154c4019f_h.jpg")!
         let sws = NSWorkspace.shared

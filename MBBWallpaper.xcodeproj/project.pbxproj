@@ -15,7 +15,6 @@
 		7D4F07FE2011E9A4000F6B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D4F07FC2011E9A4000F6B0D /* Main.storyboard */; };
 		7D4F080A2011E9A4000F6B0D /* MBBWallpaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F08092011E9A4000F6B0D /* MBBWallpaperTests.swift */; };
 		7D4F08152011E9A4000F6B0D /* MBBWallpaperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F08142011E9A4000F6B0D /* MBBWallpaperUITests.swift */; };
-		7D5C225A202CA22800D84A44 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C2259202CA22800D84A44 /* RxTest.framework */; };
 		7D5C2263202CA23600D84A44 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225C202CA23500D84A44 /* RxCocoa.framework */; };
 		7D5C2264202CA23600D84A44 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225C202CA23500D84A44 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D5C2265202CA23600D84A44 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5C225D202CA23500D84A44 /* RxSwift.framework */; };
@@ -34,6 +33,7 @@
 		7D5F06D820285D07005018B0 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5F06D720285D07005018B0 /* MenuView.xib */; };
 		7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71C4A7201B153200F53E9A /* ImageItem.swift */; };
 		7D71C4AA201B153200F53E9A /* ImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D71C4A8201B153200F53E9A /* ImageItem.xib */; };
+		7DB44F41202D8BF80025EDE7 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB44F40202D8BF80025EDE7 /* ImageDownloader.swift */; };
 		7DC124712015C55900C44279 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC124702015C55900C44279 /* DragView.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		7D7C0E56202CA1B4008038F9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -102,6 +102,7 @@
 		7D5F06D720285D07005018B0 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		7D71C4A7201B153200F53E9A /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		7D71C4A8201B153200F53E9A /* ImageItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageItem.xib; sourceTree = "<group>"; };
+		7DB44F40202D8BF80025EDE7 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		7DC124702015C55900C44279 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +112,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5C226F202CA27000D84A44 /* RxBlocking.framework in Frameworks */,
-				7D5C225A202CA22800D84A44 /* RxTest.framework in Frameworks */,
 				7D5C2269202CA23600D84A44 /* HandyJSON.framework in Frameworks */,
 				7D5C2265202CA23600D84A44 /* RxSwift.framework in Frameworks */,
 				7D5C226B202CA23600D84A44 /* Kingfisher.framework in Frameworks */,
@@ -177,6 +177,7 @@
 		7D4F07F52011E9A4000F6B0D /* MBBWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				7DB44F3F202D8BC80025EDE7 /* Dowloader */,
 				7D5F06D2202747A5005018B0 /* ViewController */,
 				7D4E641020231B03000E2AC0 /* Pop */,
 				7D71C4A6201B151100F53E9A /* Cell */,
@@ -242,6 +243,14 @@
 			path = FrameWork;
 			sourceTree = "<group>";
 		};
+		7DB44F3F202D8BC80025EDE7 /* Dowloader */ = {
+			isa = PBXGroup;
+			children = (
+				7DB44F40202D8BF80025EDE7 /* ImageDownloader.swift */,
+			);
+			path = Dowloader;
+			sourceTree = "<group>";
+		};
 		7DC1246F2015C53400C44279 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +272,7 @@
 				7D4F07F02011E9A4000F6B0D /* Frameworks */,
 				7D4F07F12011E9A4000F6B0D /* Resources */,
 				7D7C0E56202CA1B4008038F9 /* Embed Frameworks */,
+				7DB44F49202D9C520025EDE7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -323,8 +333,11 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
 							com.apple.Sandbox = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -389,6 +402,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7DB44F49202D9C520025EDE7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/HandyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/RxSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7D4F07EF2011E9A4000F6B0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -396,6 +432,7 @@
 			files = (
 				7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */,
 				7D5F06D4202806C3005018B0 /* MenuView.swift in Sources */,
+				7DB44F41202D8BF80025EDE7 /* ImageDownloader.swift in Sources */,
 				7D4F07F92011E9A4000F6B0D /* ViewController.swift in Sources */,
 				7D4E641320231B1E000E2AC0 /* PopViewController.swift in Sources */,
 				7D4F07F72011E9A4000F6B0D /* AppDelegate.swift in Sources */,
@@ -556,7 +593,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MBBWallpaper/MBBWallpaper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 25AV5Y6AN6;
@@ -577,7 +613,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MBBWallpaper/MBBWallpaper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 25AV5Y6AN6;
