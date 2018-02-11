@@ -15,13 +15,13 @@ class ImageDownloader: NSObject {
     
     private override init() {
         self.cache = ImageCache.init(name: "MBBWallpaper", path: path, diskCachePathClosure: { (path, cacheName) -> String in
-            return (path! as NSString).appendingPathComponent("桌面")
+            return (path! as NSString).appendingPathComponent("Wallpaper")
         })
     }
     
     let path = NSSearchPathForDirectoriesInDomains(.picturesDirectory, .userDomainMask, true).last
     private var cache: ImageCache
-
+    static let cacheKey = "wallpaper"
     
     /// 下载图片并存储
     ///
@@ -41,12 +41,12 @@ class ImageDownloader: NSObject {
                 complete?(nil)
             } else {
                 // 存储
-                self.cache.store(image!, original: nil,
-                                 forKey: "haha",
-                                 processorIdentifier: "haha",
+                self.cache.store(image!,
+                                 forKey: urlString,
+                                 processorIdentifier: ImageDownloader.cacheKey,
                                  toDisk: true,
                                  completionHandler: {
-                                    complete?(self.cache.cachePath(forKey: urlString))
+                                    complete?(self.cache.cachePath(forKey: urlString, processorIdentifier: ImageDownloader.cacheKey))
                 })
             }
         }
