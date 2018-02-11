@@ -10,8 +10,25 @@ import Cocoa
 import Kingfisher
 
 class ImageDownloader: NSObject {
+    
+    public static let shared = ImageDownloader()
+    
+    private override init() {
+        self.cache = ImageCache.init(name: "MBBWallpaper", path: path, diskCachePathClosure: { (path, cacheName) -> String in
+            return (path! as NSString).appendingPathComponent("桌面")
+        })
+    }
+    
+    let path = NSSearchPathForDirectoriesInDomains(.picturesDirectory, .userDomainMask, true).last
+    private var cache: ImageCache
 
-    class func getImage(for urlString: String, complete:((_ image: NSImage?) -> Void)? = nil) {
+    
+    /// 下载图片并存储
+    ///
+    /// - Parameters:
+    ///   - urlString: 下载地址
+    ///   - complete: 下载完成的回调，参数为图片存储地址，下载失败时为nil
+    func getImage(for urlString: String, complete:((_ imagePath: String?) -> Void)? = nil) {
         
         guard let url = URL(string: urlString) else {
             complete?(nil)
@@ -23,9 +40,14 @@ class ImageDownloader: NSObject {
                 print(error ?? "")
                 complete?(nil)
             } else {
-                print("\ndownload success:\n" + urlString + "\npath:" + KingfisherManager.shared.cache.cachePath(forKey: urlString))
-                
-                complete?(image)
+                // 存储
+                self.cache.store(image!, original: nil,
+                                 forKey: "haha",
+                                 processorIdentifier: "haha",
+                                 toDisk: true,
+                                 completionHandler: {
+                                    complete?(self.cache.cachePath(forKey: urlString))
+                })
             }
         }
     }

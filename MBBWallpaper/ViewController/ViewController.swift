@@ -67,17 +67,22 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             return
         }
         
-        ImageDownloader.getImage(for: "https://c1.staticflickr.com/6/5572/14689720998_d154c4019f_h.jpg") { (image) in
-            print(image)
+        ImageDownloader.getImage(for: "https://c1.staticflickr.com/6/5572/14689720998_d154c4019f_h.jpg") { (path) in
+            if let path = path {
+                self.updateWallpapaer(path: "file://" + path)
+            }
         }
-//        let url = NSURL.fileURL(withPath:imagePath)
-        let url = URL(string: "https://c1.staticflickr.com/6/5572/14689720998_d154c4019f_h.jpg")!
+//        let url = URL(string: "https://c1.staticflickr.com/6/5572/14689720998_d154c4019f_h.jpg")!
+    }
+    
+    func updateWallpapaer(path: String) {
+        let url = NSURL.fileURL(withPath:path)
         let sws = NSWorkspace.shared
         for screen in NSScreen.screens {
             guard let opt = sws.desktopImageOptions(for: screen) else {
                 continue
             }
-
+            
             do {
                 try sws.setDesktopImageURL(url, for: screen, options: opt)
             } catch {
