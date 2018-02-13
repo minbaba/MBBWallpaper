@@ -33,6 +33,10 @@
 		7D5F06D820285D07005018B0 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5F06D720285D07005018B0 /* MenuView.xib */; };
 		7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D71C4A7201B153200F53E9A /* ImageItem.swift */; };
 		7D71C4AA201B153200F53E9A /* ImageItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D71C4A8201B153200F53E9A /* ImageItem.xib */; };
+		7D8257D02032D35800518966 /* HttpErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8257CC2032D35800518966 /* HttpErrorCode.swift */; };
+		7D8257D12032D35800518966 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8257CD2032D35800518966 /* HttpManager.swift */; };
+		7D8257D22032D35800518966 /* HttpResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8257CE2032D35800518966 /* HttpResponseModel.swift */; };
+		7D8257D32032D35800518966 /* HttpUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8257CF2032D35800518966 /* HttpUrl.swift */; };
 		7DB44F41202D8BF80025EDE7 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB44F40202D8BF80025EDE7 /* ImageDownloader.swift */; };
 		7DC124712015C55900C44279 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC124702015C55900C44279 /* DragView.swift */; };
 /* End PBXBuildFile section */
@@ -102,6 +106,10 @@
 		7D5F06D720285D07005018B0 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		7D71C4A7201B153200F53E9A /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		7D71C4A8201B153200F53E9A /* ImageItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageItem.xib; sourceTree = "<group>"; };
+		7D8257CC2032D35800518966 /* HttpErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpErrorCode.swift; sourceTree = "<group>"; };
+		7D8257CD2032D35800518966 /* HttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
+		7D8257CE2032D35800518966 /* HttpResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponseModel.swift; sourceTree = "<group>"; };
+		7D8257CF2032D35800518966 /* HttpUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUrl.swift; sourceTree = "<group>"; };
 		7DB44F40202D8BF80025EDE7 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		7DC124702015C55900C44279 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +185,7 @@
 		7D4F07F52011E9A4000F6B0D /* MBBWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				7D8257CB2032D35800518966 /* Network */,
 				7DB44F3F202D8BC80025EDE7 /* Dowloader */,
 				7D5F06D2202747A5005018B0 /* ViewController */,
 				7D4E641020231B03000E2AC0 /* Pop */,
@@ -241,6 +250,17 @@
 			children = (
 			);
 			path = FrameWork;
+			sourceTree = "<group>";
+		};
+		7D8257CB2032D35800518966 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7D8257CC2032D35800518966 /* HttpErrorCode.swift */,
+				7D8257CD2032D35800518966 /* HttpManager.swift */,
+				7D8257CE2032D35800518966 /* HttpResponseModel.swift */,
+				7D8257CF2032D35800518966 /* HttpUrl.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		7DB44F3F202D8BC80025EDE7 /* Dowloader */ = {
@@ -430,9 +450,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8257D22032D35800518966 /* HttpResponseModel.swift in Sources */,
 				7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */,
 				7D5F06D4202806C3005018B0 /* MenuView.swift in Sources */,
 				7DB44F41202D8BF80025EDE7 /* ImageDownloader.swift in Sources */,
+				7D8257D12032D35800518966 /* HttpManager.swift in Sources */,
+				7D8257D32032D35800518966 /* HttpUrl.swift in Sources */,
+				7D8257D02032D35800518966 /* HttpErrorCode.swift in Sources */,
 				7D4F07F92011E9A4000F6B0D /* ViewController.swift in Sources */,
 				7D4E641320231B1E000E2AC0 /* PopViewController.swift in Sources */,
 				7D4F07F72011E9A4000F6B0D /* AppDelegate.swift in Sources */,

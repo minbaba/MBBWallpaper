@@ -11,7 +11,6 @@ import AppKit
 
 class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, DragViewDelegate {
     
-
     @IBOutlet weak var collection: NSCollectionView!
     @IBOutlet weak var dragView: DragView!
     
