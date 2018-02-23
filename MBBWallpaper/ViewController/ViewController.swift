@@ -16,7 +16,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     @IBOutlet weak var dragView: DragView!
     
     var statusItem: NSStatusItem!
-    var imagesList: [String]?
+    var imagesList: [ImageModel]?
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -56,7 +56,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier("cell"), for: indexPath) as! ImageItem
-        item.updateImage(image: NSImage(contentsOfFile: self.imagesList![indexPath.item]))
+        item.updateImage(image: self.imagesList![indexPath.item].source)
         return item
     }
     
@@ -96,13 +96,18 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     
     func dragViewReceivedImages(dragView: DragView, images: [String]) {
-        self.imagesList = images
-        self.collection.reloadData()
+//        self.imagesList = images
+//        self.collection.reloadData()
     }
     
     func loadFeedList() {
         HttpManager.request(url: StaticHttpUrl.feedList).subscribe(onNext: { (response) in
-            print(response.data)
+            if let arr = response.data as? [[String:Any]] {
+                self.imagesList = arr.flatMap{
+                    ImageModel.deserialize(from: $0)
+                }
+            }
+            self.collection.reloadData()
         }).disposed(by: disposeBag)
     }
     

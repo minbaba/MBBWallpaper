@@ -39,6 +39,8 @@
 		7D8257D32032D35800518966 /* HttpUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8257CF2032D35800518966 /* HttpUrl.swift */; };
 		7DB44F41202D8BF80025EDE7 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB44F40202D8BF80025EDE7 /* ImageDownloader.swift */; };
 		7DC124712015C55900C44279 /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC124702015C55900C44279 /* DragView.swift */; };
+		7DDE0FF8203FA66200E5AADA /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE0FF7203FA66200E5AADA /* ImageModel.swift */; };
+		7DDE0FFA203FA6B200E5AADA /* ImageClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE0FF9203FA6B200E5AADA /* ImageClasses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		7D8257CF2032D35800518966 /* HttpUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUrl.swift; sourceTree = "<group>"; };
 		7DB44F40202D8BF80025EDE7 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		7DC124702015C55900C44279 /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
+		7DDE0FF7203FA66200E5AADA /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		7DDE0FF9203FA6B200E5AADA /* ImageClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClasses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 		7D4F07F52011E9A4000F6B0D /* MBBWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				7DDE0FF6203FA63C00E5AADA /* Model */,
 				7D8257CB2032D35800518966 /* Network */,
 				7DB44F3F202D8BC80025EDE7 /* Dowloader */,
 				7D5F06D2202747A5005018B0 /* ViewController */,
@@ -279,6 +284,15 @@
 				7D5F06D720285D07005018B0 /* MenuView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7DDE0FF6203FA63C00E5AADA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7DDE0FF7203FA66200E5AADA /* ImageModel.swift */,
+				7DDE0FF9203FA6B200E5AADA /* ImageClasses.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,10 +467,12 @@
 				7D8257D22032D35800518966 /* HttpResponseModel.swift in Sources */,
 				7D71C4A9201B153200F53E9A /* ImageItem.swift in Sources */,
 				7D5F06D4202806C3005018B0 /* MenuView.swift in Sources */,
+				7DDE0FFA203FA6B200E5AADA /* ImageClasses.swift in Sources */,
 				7DB44F41202D8BF80025EDE7 /* ImageDownloader.swift in Sources */,
 				7D8257D12032D35800518966 /* HttpManager.swift in Sources */,
 				7D8257D32032D35800518966 /* HttpUrl.swift in Sources */,
 				7D8257D02032D35800518966 /* HttpErrorCode.swift in Sources */,
+				7DDE0FF8203FA66200E5AADA /* ImageModel.swift in Sources */,
 				7D4F07F92011E9A4000F6B0D /* ViewController.swift in Sources */,
 				7D4E641320231B1E000E2AC0 /* PopViewController.swift in Sources */,
 				7D4F07F72011E9A4000F6B0D /* AppDelegate.swift in Sources */,

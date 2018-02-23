@@ -35,6 +35,13 @@ class ImageDownloader: NSObject {
             return
         }
         
+        // 判断图片是否存在
+        
+        if self.cache.imageCachedType(forKey: urlString, processorIdentifier: ImageDownloader.cacheKey) != .none {
+            complete?(self.cache.cachePath(forKey: urlString, processorIdentifier: ImageDownloader.cacheKey))
+            return
+        }
+        
         KingfisherManager.shared.downloader.downloadImage(with: url) { (image, error, _, _) in
             if let _ = error {
                 print(error ?? "")
