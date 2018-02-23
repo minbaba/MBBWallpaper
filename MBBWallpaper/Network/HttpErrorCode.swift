@@ -11,7 +11,7 @@ import HandyJSON
 enum HttpErrorCode: Int, HandyJSONEnum {
 
     case notFound = 404
-    case Success = 1000                 ///< 请求成功
+    case Success = 0                 ///< 请求成功
     case RequestFailed = 40000          ///< 请求失败
     case InvalidToken = 40002           ///< 登陆已失效
     case InvalidLogin = 40003           ///< 账号在其它设备登陆

@@ -8,6 +8,7 @@
 
 import Cocoa
 import AppKit
+import RxSwift
 
 class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, DragViewDelegate {
     
@@ -16,6 +17,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     var statusItem: NSStatusItem!
     var imagesList: [String]?
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         dragView.delegate = self
         
         self.constructStatusItem()
+        self.loadFeedList()
     }
     
     override func viewDidLayout() {
@@ -95,6 +98,12 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     func dragViewReceivedImages(dragView: DragView, images: [String]) {
         self.imagesList = images
         self.collection.reloadData()
+    }
+    
+    func loadFeedList() {
+        HttpManager.request(url: StaticHttpUrl.feedList).subscribe(onNext: { (response) in
+            print(response.data)
+        }).disposed(by: disposeBag)
     }
     
     func constructStatusItem() {
